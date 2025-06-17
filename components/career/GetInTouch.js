@@ -10,6 +10,7 @@ import careerPhoto from "/public/assets/images/imbound_outbound_salese.png";
 
 
 const countryCodes = [
+  { code: "+91", label: "India (+91)", length: 10 },
   { code: "+1", label: "USA (+1)", length: 10 },
   { code: "+7", label: "Russia (+7)", length: 10 },
   { code: "+20", label: "Egypt (+20)", length: 10 },
@@ -48,7 +49,7 @@ const countryCodes = [
   { code: "+84", label: "Vietnam (+84)", length: 9 },
   { code: "+86", label: "China (+86)", length: 10 },
   { code: "+90", label: "Turkey (+90)", length: 10 },
-  { code: "+91", label: "India (+91)", length: 10 },
+
   { code: "+92", label: "Pakistan (+92)", length: 10 },
   { code: "+93", label: "Afghanistan (+93)", length: 9 },
   { code: "+94", label: "Sri Lanka (+94)", length: 9 },
