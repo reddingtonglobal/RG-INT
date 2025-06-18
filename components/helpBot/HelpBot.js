@@ -60,7 +60,7 @@ const HelpBot = () => {
         setTypingText('');
 
         try {
-            const response = await fetch('http://localhost:3001/ask', {
+            const response = await fetch(`https://server-wny7.onrender.com/ask`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: input }),
