@@ -1,13 +1,12 @@
-
+// route.js
 import mongoose from "mongoose";
-
-// 1. MongoDB connection (local, db: rg)
 
 if (!process.env.MONGODB_URI) {
   throw new Error("Please define the MONGODB_URI environment variable");
 }
 const MONGODB_URI = process.env.MONGODB_URI;
 
+// Connect to MongoDB
 async function dbConnect() {
   if (mongoose.connection.readyState >= 1) return;
   return mongoose.connect(MONGODB_URI, {
@@ -16,7 +15,7 @@ async function dbConnect() {
   });
 }
 
-// 2. Mongoose model for 'git' collection
+// Schema for Contact (stored in 'git' collection)
 const ContactMessageSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -28,20 +27,34 @@ const ContactMessageSchema = new mongoose.Schema({
 
 const ContactMessage = mongoose.models.ContactMessage || mongoose.model("ContactMessage", ContactMessageSchema);
 
-// 3. API route handler
+// Schema for Newsletter Subscribers (stored in 'newsletter subscribers' collection)
+const NewsletterSubscriberSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  subscribedAt: { type: Date, default: Date.now },
+}, { collection: "newsletter subscribers" });
+
+const NewsletterSubscriber = mongoose.models["newsletter subscribers"] || mongoose.model("newsletter subscribers", NewsletterSubscriberSchema);
+
+// Route handler
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { name, email, phone, subject, message } = body;
-
     await dbConnect();
 
-    // Store in MongoDB (db: rg, collection: git)
-    await ContactMessage.create({ name, email, phone, subject, message });
+    if (body?.type === "Newsletter") {
+      // Newsletter form submission
+      const { name, email } = body;
+      await NewsletterSubscriber.create({ name, email });
+    } else {
+      // Contact form submission
+      const { name, email, phone, subject, message } = body;
+      await ContactMessage.create({ name, email, phone, subject, message });
+    }
 
     return new Response(JSON.stringify({ success: true }), { status: 200 });
   } catch (error) {
-    console.error("Error saving contact message:", error);
-    return new Response(JSON.stringify({ error: "Failed to save message" }), { status: 500 });
+    console.error("Error saving to database:", error);
+    return new Response(JSON.stringify({ error: "Failed to save data" }), { status: 500 });
   }
-} 
+}
