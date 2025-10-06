@@ -212,11 +212,11 @@ const Header = () => {
       <div className="top_menu blueBg !bg-[url('/assets/images/topHeader_bg.png')]  x1:bg-[center_left_-15rem] lg:bg-[center_left_-25rem] !bg-no-repeat py-0 bg-cover h-[60px] px-2 md:block hidden z-50 relative">
         <div className="container flex justify-between">
           <div className="flex items-center gap-3 w-1/3">
-            <a
-              href="https://maps.app.goo.gl/GL93UmC5ogNrjBe79"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+              <a
+                href="https://www.google.com/maps?q=750,+Udyog+Vihar+Phase+5,+Sector+19,+Gurugram,+Haryana+122016"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
               <Image
                 src="/assets/icons/location-icon.svg"
                 alt="location"
@@ -225,9 +225,9 @@ const Header = () => {
                 className="brightness-0 lg:invert-0 invert-[1]"
               />
             </a>
-            <p className="lg:text-black text-white">
-              177, Udyog Vihar Phase 1, Sector 20, Gurugram - 122016
-            </p>
+              <p className="lg:text-black text-white">
+                750, Udyog Vihar Phase 5, Sector 19, Gurugram, Haryana 122016
+              </p>
           </div>
           <div className="flex items-center gap-3 w-4/6 justify-end">
             <div className="flex pl-[80px] gap-3">
