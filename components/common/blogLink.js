@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 const BlogLink = () => {
@@ -5,11 +6,18 @@ const BlogLink = () => {
     e.preventDefault(); // Prevent default link behavior
 
     // Open external URL in a new tab/window
-    window.open('https://www.linkedin.com/company/immergixthefuture/', '_blank');
+    if (typeof window !== 'undefined') {
+      window.open('https://www.linkedin.com/company/immergixthefuture/', '_blank');
+    }
   };
 
   return (
-    <a href="https://www.linkedin.com/company/immergixthefuture/" onClick={handleClick}>
+    <a 
+      href="https://www.linkedin.com/company/immergixthefuture/" 
+      onClick={handleClick}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Blog
     </a>
   );

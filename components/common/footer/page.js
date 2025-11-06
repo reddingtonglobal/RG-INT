@@ -7,17 +7,19 @@ import Link from "next/link";
 import React from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-const BlogLink = () => {
+const FooterBlogLink = () => {
   const pathname = usePathname();
   const isExternal = !pathname.startsWith("/");
 
   const handleClick = (e) => {
     if (isExternal) {
       e.preventDefault();
-      window.open(
-        "https://in.linkedin.com/company/reddington-global-consultancy-pvt-ltd",
-        "_blank"
-      );
+      if (typeof window !== 'undefined') {
+        window.open(
+          "https://in.linkedin.com/company/reddington-global-consultancy-pvt-ltd",
+          "_blank"
+        );
+      }
     }
   };
 
@@ -126,7 +128,7 @@ const Footer = () => {
             </h3>
             <hr className="w-[90.751px] h-[3px] bg-[#DFDF00]" />
             <ul className="text-[15px] uppercase text-white sm:mt-[30px] mt-[15px] sm:mb-0 mb-6 footerList">
-              <BlogLink />
+              <FooterBlogLink />
               <li className="mb-3  pl-4 relative">
                 <Link href="/about">About Us</Link>
               </li>
@@ -136,20 +138,129 @@ const Footer = () => {
               <li className="mb-3  pl-4 relative">
                 <Link href="/contact_us">Contact Us</Link>
               </li>
+              <li className="mb-3 pl-4 relative">
+                <a 
+                  href="mailto:sales@reddingtonglobal.com"
+                  className="text-white hover:text-[#DFDF00] transition-colors normal-case"
+                >
+                  📧 sales@reddingtonglobal.com
+                </a>
+              </li>
             </ul>
           </div>
           <div className="md:w-1/4 w-full">
             <h3 className="text-lg font-semibold uppercase text-white">
-              Support
+              Our Offices
             </h3>
             <hr className="w-[90.751px] h-[3px] bg-[#DFDF00]" />
-            <p className="text-lg uppercase sm:my-[30px] mt-[15px] mb-0 sm:mb-[20px] text-white lg:w-[242px]">
-              If you have a General enquiry, please drop me an email
-            </p>
-            <p className="text-white text-[15px] uppercase break-words">
-              Sales@reddingtonglobal.com
-            </p>
-            {/* <p className="text-white text-[15px]">asssdfg@example.com</p> */}
+            <div className="sm:mt-[30px] mt-[15px] space-y-4">
+              {/* RG Consultancy */}
+              <Link href="/" className="block group">
+                <div className="bg-white/5 p-3 rounded-lg border border-transparent hover:border-[#DFDF00] hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                  <div className="flex items-start gap-3">
+                    <div className="relative">
+                      <Image
+                        src="/assets/images/rglogo3.png"
+                        alt="RG Consultancy"
+                        width={50}
+                        height={25}
+                        className="mt-1 brightness-110 contrast-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] group-hover:brightness-150 group-hover:drop-shadow-[0_0_15px_rgba(223,223,0,0.8)] transition-all duration-300"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white text-sm font-bold mb-1 group-hover:text-[#DFDF00] transition-colors">
+                        RG Consultancy
+                      </p>
+                      <p className="text-gray-300 text-xs leading-relaxed group-hover:text-white transition-colors">
+                        Tulip Ivory T-D ,FL - G002  sector-70 , Gurugram ,Haryana 122016
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              
+              {/* RG Group Inc */}
+              <Link href="/" className="block group">
+                <div className="bg-white/5 p-3 rounded-lg border border-transparent hover:border-[#DFDF00] hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                  <div className="flex items-start gap-3">
+                    <div className="relative">
+                      <Image
+                        src="/assets/images/rginclogo.png"
+                        alt="RG Group Inc"
+                        width={50}
+                        height={25}
+                        className="mt-1 brightness-110 contrast-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] group-hover:brightness-150 group-hover:drop-shadow-[0_0_15px_rgba(223,223,0,0.8)] transition-all duration-300"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white text-sm font-bold mb-1 group-hover:text-[#DFDF00] transition-colors">
+                        RG Group Inc
+                      </p>
+                      <p className="text-gray-300 text-xs leading-relaxed group-hover:text-white transition-colors">
+                        30 N Gould St Ste R Sheridan, WY 82801
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              
+              {/* Immergix */}
+              <a 
+                href="https://maps.google.com/?q=750, Udyog Vihar Phase 5, Sector 19, Gurugram, Haryana 122016" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="block group"
+              >
+                <div className="bg-white/5 p-3 rounded-lg border border-transparent hover:border-[#DFDF00] hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer">
+                  <div className="flex items-start gap-3">
+                    <div className="relative">
+                      <Image
+                        src="/assets/images/Immergix_White_Logo.png"
+                        alt="Immergix"
+                        width={70}
+                        height={18}
+                        className="mt-1 brightness-110 contrast-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] group-hover:brightness-150 group-hover:drop-shadow-[0_0_15px_rgba(223,223,0,0.8)] transition-all duration-300"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-gray-300 text-xs leading-relaxed group-hover:text-white transition-colors mt-1">
+                        📍 750, Udyog Vihar Phase 5, Sector 19, Gurugram, Haryana 122016
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              
+              {/* RG Care Foundation */}
+              <a 
+                href="https://maps.google.com/?q=750, Udyog Vihar Phase 5, Sector 19, Gurugram, Haryana 122016" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="block group"
+              >
+                <div className="bg-white/5 p-3 rounded-lg border border-transparent hover:border-[#DFDF00] hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer">
+                  <div className="flex items-start gap-3">
+                    <div className="relative">
+                      <Image
+                        src="/assets/images/rgcarefoundation.png"
+                        alt="RG Care Foundation"
+                        width={50}
+                        height={25}
+                        className="mt-1 brightness-110 contrast-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] group-hover:brightness-150 group-hover:drop-shadow-[0_0_15px_rgba(223,223,0,0.8)] transition-all duration-300"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white text-sm font-bold mb-1 group-hover:text-[#DFDF00] transition-colors">
+                        RG Care Foundation
+                      </p>
+                      <p className="text-gray-300 text-xs leading-relaxed group-hover:text-white transition-colors">
+                        📍 750, Udyog Vihar Phase 5, Sector 19, Gurugram, Haryana 122016
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>

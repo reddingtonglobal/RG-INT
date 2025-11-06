@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/common/header/page'
+import Header from '@/components/common/header/Header'
 import Footer from '@/components/common/footer/page'
 import Head from 'next/head';
 

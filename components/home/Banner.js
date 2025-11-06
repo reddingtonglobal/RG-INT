@@ -14,7 +14,7 @@ const Banner = () => {
   const [isMuted, setIsMuted] = useState(true);
 
   const toggleMute = () => {
-    setIsMuted(!isMuted);T
+    setIsMuted(!isMuted);
   };
   return (
     <>
