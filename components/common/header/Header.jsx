@@ -162,40 +162,40 @@ const Header = () => {
       <div className="w-full py-2 md:py-3 border-b border-white/10">
         <div className="flex items-center justify-between w-full px-2 md:px-4">
           {/* Left logos */}
-          <div className="flex items-center justify-start gap-2 sm:gap-4 md:gap-8 lg:gap-14 xl:gap-20 w-full overflow-x-auto">
+          <div className="flex items-center justify-start gap-1 sm:gap-2 md:gap-4 lg:gap-8 xl:gap-14 w-full overflow-hidden">
             {/* 1️⃣ RG Consultancy — absolutely flush left */}
             <div className="flex-shrink-0">
               <Link href="https://reddingtonglobal.com" target="_blank" rel="noopener noreferrer">
                 <LogoBox
                   src="/assets/images/rglogo3.png"
                   alt="RG Consultancy"
-                  customSize="h-[60px] w-[120px] sm:h-[80px] sm:w-[160px] md:h-[100px] md:w-[200px] lg:h-[130px] lg:w-[280px]"
+                  customSize="h-[40px] w-[80px] sm:h-[60px] sm:w-[120px] md:h-[80px] md:w-[160px] lg:h-[100px] lg:w-[200px] xl:h-[130px] xl:w-[280px]"
                   priority
                 />
               </Link>
             </div>
 
             {/* 2️⃣ IMMERGIX */}
-            <div className="hidden sm:block flex-shrink-0">
+            <div className="flex-shrink-0">
               <Link href="https://reddingtonglobal.com" target="_blank" rel="noopener noreferrer">
                 <LogoBox
                   src="/assets/images/Immergix_White_Logo.png"
                   alt="IMMERGIX"
-                  customSize="h-[50px] w-[150px] sm:h-[60px] sm:w-[180px] md:h-[70px] md:w-[220px] lg:h-[90px] lg:w-[300px]"
+                  customSize="h-[35px] w-[100px] sm:h-[50px] sm:w-[150px] md:h-[60px] md:w-[180px] lg:h-[70px] lg:w-[220px] xl:h-[90px] xl:w-[300px]"
                 />
               </Link>
             </div>
 
             {/* 3️⃣ Reddington Group INC */}
-            <div className="hidden md:block flex-shrink-0">
+            <div className="flex-shrink-0">
               <Link href="https://reddingtonglobal.com" target="_blank" rel="noopener noreferrer">
                 <div className="flex flex-col items-center justify-center">
                   <LogoBox
                     src="/assets/images/rginclogo.png"
                     alt="Reddington Group INC"
-                    customSize="h-[60px] w-[150px] lg:h-[90px] lg:w-[250px]"
+                    customSize="h-[35px] w-[90px] sm:h-[45px] sm:w-[110px] md:h-[60px] md:w-[150px] lg:h-[75px] lg:w-[190px] xl:h-[90px] xl:w-[250px]"
                   />
-                  <p className="text-white text-[8px] md:text-[10px] lg:text-xs leading-none mt-[2px] tracking-wide uppercase text-center font-semibold">
+                  <p className="text-white text-[6px] sm:text-[8px] md:text-[9px] lg:text-[10px] xl:text-xs leading-none mt-[1px] tracking-wide uppercase text-center font-semibold">
                     Reddington Group INC
                   </p>
                 </div>
@@ -203,15 +203,15 @@ const Header = () => {
             </div>
 
             {/* 4️⃣ RG Care Foundation */}
-            <div className="hidden lg:block flex-shrink-0">
+            <div className="flex-shrink-0">
               <Link href="https://rgcare.in" target="_blank" rel="noopener noreferrer">
                 <div className="flex flex-col items-center justify-center">
                   <LogoBox
                     src="/assets/images/rgcarefoundation.png"
                     alt="RG Care Foundation"
-                    customSize="h-[90px] w-[250px]"
+                    customSize="h-[35px] w-[90px] sm:h-[45px] sm:w-[110px] md:h-[60px] md:w-[150px] lg:h-[75px] lg:w-[190px] xl:h-[90px] xl:w-[250px]"
                   />
-                  <p className="text-white text-xs leading-none mt-[2px] tracking-wide uppercase text-center font-semibold">
+                  <p className="text-white text-[6px] sm:text-[8px] md:text-[9px] lg:text-[10px] xl:text-xs leading-none mt-[1px] tracking-wide uppercase text-center font-semibold">
                     Reddington Global Care
                   </p>
                 </div>
