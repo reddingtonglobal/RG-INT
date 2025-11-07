@@ -1,11 +1,11 @@
 "use client";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 // Simple error boundary for menu
 const SafeMenu = ({ children, fallback = null }) => {
@@ -159,43 +159,43 @@ const Header = () => {
   return (
     <header className="bg-[#00224C]">
       {/* ======= TOP STRIP ======= */}
-      <div className="w-full py-2 md:py-3 border-b border-white/10">
-        <div className="flex items-center justify-between w-full px-2 md:px-4">
-          {/* Left logos */}
-          <div className="flex items-center justify-start gap-1 sm:gap-2 md:gap-4 lg:gap-8 xl:gap-14 w-full overflow-hidden">
+      <div className="w-full py-1 sm:py-2 md:py-3 border-b border-white/10">
+        <div className="flex items-center w-full px-1 sm:px-2 md:px-4">
+          {/* Left logos - takes more space on mobile */}
+          <div className="flex items-center justify-start gap-0.5 xs:gap-1 sm:gap-2 md:gap-4 lg:gap-8 xl:gap-14 flex-1 min-w-0 overflow-hidden">
             {/* 1️⃣ RG Consultancy — absolutely flush left */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 min-w-0">
               <Link href="https://reddingtonglobal.com" target="_blank" rel="noopener noreferrer">
                 <LogoBox
                   src="/assets/images/rglogo3.png"
                   alt="RG Consultancy"
-                  customSize="h-[40px] w-[80px] sm:h-[60px] sm:w-[120px] md:h-[80px] md:w-[160px] lg:h-[100px] lg:w-[200px] xl:h-[130px] xl:w-[280px]"
+                  customSize="h-[30px] w-[60px] xs:h-[35px] xs:w-[70px] sm:h-[50px] sm:w-[100px] md:h-[70px] md:w-[140px] lg:h-[90px] lg:w-[180px] xl:h-[130px] xl:w-[280px]"
                   priority
                 />
               </Link>
             </div>
 
             {/* 2️⃣ IMMERGIX */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 min-w-0">
               <Link href="https://reddingtonglobal.com" target="_blank" rel="noopener noreferrer">
                 <LogoBox
                   src="/assets/images/Immergix_White_Logo.png"
                   alt="IMMERGIX"
-                  customSize="h-[35px] w-[100px] sm:h-[50px] sm:w-[150px] md:h-[60px] md:w-[180px] lg:h-[70px] lg:w-[220px] xl:h-[90px] xl:w-[300px]"
+                  customSize="h-[25px] w-[75px] xs:h-[30px] xs:w-[90px] sm:h-[40px] sm:w-[120px] md:h-[55px] md:w-[165px] lg:h-[70px] lg:w-[210px] xl:h-[90px] xl:w-[300px]"
                 />
               </Link>
             </div>
 
             {/* 3️⃣ Reddington Group INC */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 min-w-0">
               <Link href="https://reddingtonglobal.com" target="_blank" rel="noopener noreferrer">
                 <div className="flex flex-col items-center justify-center">
                   <LogoBox
                     src="/assets/images/rginclogo.png"
                     alt="Reddington Group INC"
-                    customSize="h-[35px] w-[90px] sm:h-[45px] sm:w-[110px] md:h-[60px] md:w-[150px] lg:h-[75px] lg:w-[190px] xl:h-[90px] xl:w-[250px]"
+                    customSize="h-[25px] w-[60px] xs:h-[28px] xs:w-[70px] sm:h-[35px] sm:w-[85px] md:h-[50px] md:w-[125px] lg:h-[65px] lg:w-[165px] xl:h-[90px] xl:w-[250px]"
                   />
-                  <p className="text-white text-[6px] sm:text-[8px] md:text-[9px] lg:text-[10px] xl:text-xs leading-none mt-[1px] tracking-wide uppercase text-center font-semibold">
+                  <p className="text-white text-[5px] xs:text-[6px] sm:text-[7px] md:text-[8px] lg:text-[9px] xl:text-xs leading-none mt-[1px] tracking-wide uppercase text-center font-semibold whitespace-nowrap">
                     Reddington Group INC
                   </p>
                 </div>
@@ -203,15 +203,15 @@ const Header = () => {
             </div>
 
             {/* 4️⃣ RG Care Foundation */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 min-w-0">
               <Link href="https://rgcare.in" target="_blank" rel="noopener noreferrer">
                 <div className="flex flex-col items-center justify-center">
                   <LogoBox
                     src="/assets/images/rgcarefoundation.png"
                     alt="RG Care Foundation"
-                    customSize="h-[35px] w-[90px] sm:h-[45px] sm:w-[110px] md:h-[60px] md:w-[150px] lg:h-[75px] lg:w-[190px] xl:h-[90px] xl:w-[250px]"
+                    customSize="h-[25px] w-[60px] xs:h-[28px] xs:w-[70px] sm:h-[35px] sm:w-[85px] md:h-[50px] md:w-[125px] lg:h-[65px] lg:w-[165px] xl:h-[90px] xl:w-[250px]"
                   />
-                  <p className="text-white text-[6px] sm:text-[8px] md:text-[9px] lg:text-[10px] xl:text-xs leading-none mt-[1px] tracking-wide uppercase text-center font-semibold">
+                  <p className="text-white text-[5px] xs:text-[6px] sm:text-[7px] md:text-[8px] lg:text-[9px] xl:text-xs leading-none mt-[1px] tracking-wide uppercase text-center font-semibold whitespace-nowrap">
                     Reddington Global Care
                   </p>
                 </div>
@@ -219,36 +219,36 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Right: Certified + Contact */}
-          <div className="flex items-center gap-2 md:gap-6 lg:gap-10 mr-2 md:mr-4 flex-shrink-0">
+          {/* Right: Certified + Contact - more compact on mobile */}
+          <div className="flex items-center gap-1 sm:gap-2 md:gap-4 lg:gap-8 flex-shrink-0 ml-1 sm:ml-2">
             <div className="flex flex-col items-center text-center">
-              <p className="text-[#DFDF00] text-[10px] sm:text-xs md:text-sm lg:text-[17px] tracking-wide mb-1">
+              <p className="text-[#DFDF00] text-[7px] xs:text-[8px] sm:text-[10px] md:text-sm lg:text-[17px] tracking-wide mb-0.5 md:mb-1 whitespace-nowrap">
                 CERTIFIED BY
               </p>
-              <div className="relative h-[20px] w-[60px] sm:h-[25px] sm:w-[80px] md:h-[30px] md:w-[120px] lg:h-[40px] lg:w-[190px]">
+              <div className="relative h-[15px] w-[45px] xs:h-[18px] xs:w-[54px] sm:h-[22px] sm:w-[66px] md:h-[28px] md:w-[105px] lg:h-[35px] lg:w-[165px] xl:h-[40px] xl:w-[190px]">
                 <Image
                   src="/assets/images/nasscomLogo.png"
                   alt="nasscom"
                   fill
-                  sizes="(max-width: 640px) 60px, (max-width: 768px) 80px, (max-width: 1024px) 120px, 190px"
+                  sizes="(max-width: 475px) 45px, (max-width: 640px) 54px, (max-width: 768px) 66px, (max-width: 1024px) 105px, (max-width: 1280px) 165px, 190px"
                   className="object-contain"
                 />
               </div>
             </div>
-            <div className="hidden sm:block h-6 md:h-8 w-px bg-white/30" />
-            <div className="flex flex-col items-start space-y-1">
-              <p className="text-[#DFDF00] text-[10px] sm:text-xs md:text-sm font-medium">
+            <div className="hidden sm:block h-4 md:h-6 lg:h-8 w-px bg-white/30" />
+            <div className="flex flex-col items-start space-y-0.5 md:space-y-1">
+              <p className="text-[#DFDF00] text-[7px] xs:text-[8px] sm:text-[10px] md:text-sm font-medium whitespace-nowrap">
                 Have Any Question
               </p>
               <Link
                 href="tel:+919818224495"
-                className="text-white text-[10px] sm:text-xs md:text-sm lg:text-base font-semibold tracking-wide hover:text-[#DFDF00] transition-colors"
+                className="text-white text-[7px] xs:text-[8px] sm:text-[10px] md:text-sm lg:text-base font-semibold tracking-wide hover:text-[#DFDF00] transition-colors whitespace-nowrap"
               >
                 +91&nbsp;9818224495
               </Link>
               <Link
                 href="tel:+19545563969"
-                className="text-white text-[10px] sm:text-xs md:text-sm lg:text-base font-semibold tracking-wide hover:text-[#DFDF00] transition-colors"
+                className="text-white text-[7px] xs:text-[8px] sm:text-[10px] md:text-sm lg:text-base font-semibold tracking-wide hover:text-[#DFDF00] transition-colors whitespace-nowrap"
               >
                 +1&nbsp;9545563969
               </Link>

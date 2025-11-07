@@ -336,9 +336,12 @@ const onFinish = async (values) => {
                   ]}
                 >
                   <Input
+                    id="fullName"
+                    name="fullName"
                     placeholder="Enter your Full Name*"
                     className="px-[30px] py-[18px]"
                     maxLength={50}
+                    autoComplete="name"
                     onBlur={handleInputBlur("name")}
                   />
                 </Form.Item>
@@ -352,9 +355,13 @@ const onFinish = async (values) => {
                   ]}
                 >
                   <Input
+                    id="email"
+                    name="email"
+                    type="email"
                     placeholder="Enter your email*"
                     className="px-[30px] py-[18px]"
                     maxLength={100}
+                    autoComplete="email"
                     onBlur={handleInputBlur("email")}
                   />
                 </Form.Item>
@@ -367,6 +374,7 @@ const onFinish = async (values) => {
                   initialValue={countryCodes[0].code}
                 >
                   <Select
+                    id="countryCode"
                     showSearch
                     placeholder="Code"
                     optionFilterProp="children"
@@ -391,9 +399,13 @@ const onFinish = async (values) => {
                   ]}
                 >
                   <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
                     placeholder="Phone No*"
                     className="px-[30px] py-[18px]"
                     maxLength={phoneLength}
+                    autoComplete="tel"
                     onChange={(e) => {
                       // Only allow digits
                       const value = e.target.value.replace(/\D/g, "");
@@ -408,9 +420,12 @@ const onFinish = async (values) => {
                   rules={[{ required: true, message: "Please enter a subject" }]}
                 >
                   <Input
+                    id="subject"
+                    name="subject"
                     placeholder="Subject"
                     className="px-[30px] py-[18px]"
                     maxLength={100}
+                    autoComplete="off"
                     onBlur={handleInputBlur("subject")}
                   />
                 </Form.Item>
@@ -423,11 +438,14 @@ const onFinish = async (values) => {
                 ]}
               >
                 <Input.TextArea
+                  id="message"
+                  name="message"
                   placeholder="Message"
                   className="px-[30px] py-[18px]"
                   rows={4}
                   maxLength={2000}
                   showCount
+                  autoComplete="off"
                   onBlur={e => {
                     let value = e.target.value.trim();
                     // Capitalize only the first word, leave the rest unchanged

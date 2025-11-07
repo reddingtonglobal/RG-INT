@@ -6,8 +6,13 @@ const AskYourQuestionForm = () => {
   return (
     <div>
         <Form>
-            <Form.Item>
-                <Input/>
+            <Form.Item name="question">
+                <Input
+                  id="question"
+                  name="question"
+                  placeholder="Enter your question"
+                  autoComplete="off"
+                />
             </Form.Item>
         </Form>
     </div>
