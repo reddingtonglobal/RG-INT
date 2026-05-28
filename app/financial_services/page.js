@@ -3,7 +3,6 @@ import FSIClients from "@/components/financialServices/FSIClients";
 import WhatWeOffer from "@/components/financialServices/WhatWeOffer";
 import WhyChooseUs from "@/components/financialServices/WhyChooseUs";
 import OurProcess from "@/components/financialServices/OurProcess";
-import LeadForm from "@/components/financialServices/LeadForm";
 import CTABanner from "@/components/financialServices/CTABanner";
 
 export const metadata = {
@@ -20,7 +19,6 @@ const FinancialServicesPage = () => {
       <WhatWeOffer />
       <WhyChooseUs />
       <OurProcess />
-      <LeadForm />
       <CTABanner />
     </>
   );
