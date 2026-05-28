@@ -60,6 +60,10 @@ const Header = () => {
           key: "services",
           children: [
             {
+              label: <Link href="/financial_services">Financial Services</Link>,
+              key: "financial_services",
+            },
+            {
               label: <Link href="/recruitment_solutions">Recruitment and Staffing Services</Link>,
               key: "recruitment",
             },

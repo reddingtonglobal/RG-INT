@@ -1,5 +1,6 @@
 import HelpBot from '@/components/helpBot/HelpBot'
 import Banner from '@/components/home/Banner'
+import DomesticClients from '@/components/home/DomesticClients'
 import GetInTouch from '@/components/home/GetInTouch'
 import LatestServices from '@/components/home/LatestServices'
 import MeetTheTeam from '@/components/home/MeetTheTeam'
@@ -11,6 +12,7 @@ export default function Home() {
     <>
     <Banner />
     <LatestServices/>
+    <DomesticClients/>
     <WhatWeDo/>
     <Testimonial/>
     <GetInTouch/>

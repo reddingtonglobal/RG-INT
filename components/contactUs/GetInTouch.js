@@ -200,6 +200,12 @@ const GetInTouch = () => {
       });
 
       if (response.ok) {
+        // Show success immediately — email is non-blocking
+        form.resetFields();
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 4000);
+
+        // Send email via EmailJS — failure won't affect user experience
         emailjs
           .send(
             serviceId,
@@ -213,16 +219,7 @@ const GetInTouch = () => {
             },
             publicKey
           )
-          .then(
-            () => {
-              form.resetFields();
-              setSubmitted(true);
-              setTimeout(() => setSubmitted(false), 4000);
-            },
-            () => {
-              alert("Saved to database, but failed to send email.");
-            }
-          );
+          .catch((err) => console.warn("EmailJS failed (non-critical):", err));
       } else {
         alert("There was an error saving your message. Please try again later.");
       }

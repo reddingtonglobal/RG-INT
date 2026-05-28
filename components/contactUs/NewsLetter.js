@@ -45,8 +45,8 @@ const Newsletter = () => {
 
       if (!saveResponse.ok) throw new Error("Database save failed");
 
-      // Send email via EmailJS
-      await emailjs.send(
+      // Send email via EmailJS — non-blocking, failure won't affect success
+      emailjs.send(
         serviceID,
         templateID,
         {
@@ -56,7 +56,7 @@ const Newsletter = () => {
           message: "New subscriber to the newsletter"
         },
         publicKey
-      );
+      ).catch((err) => console.warn("EmailJS failed (non-critical):", err));
 
       setFeedback("success");
       setFormData({ name: "", email: "" });

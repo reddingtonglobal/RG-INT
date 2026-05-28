@@ -72,20 +72,20 @@ var settings = {
 const LatestServices = () => {
   const cardData = [
     {
+      image: "/assets/images/presentingData.png",
+      icon: "/assets/icons/omni_channel_support_icon.svg",
+      title: "Financial Services",
+      description:
+        "Empowering banks, NBFCs, insurance companies, and fintech firms with compliant, secure, and scalable BPO operations — from customer support and KYC to collections and loan processing.",
+      nav: "/financial_services",
+    },
+    {
       image: "/assets/images/card_pic_immergix9.jpg",
       icon: "/assets/images/lead_generation_icon.svg",
       title: "On Site Contact Centre",
       description:
         "Transitioning from brick-and-mortar to on-site contact centers, our focus is on enhancing audience engagement. Our dedicated team ensures round-the-clock service excellence.",
       nav: "/services/virtual_centre",
-    },
-    {
-      image: "/assets/images/leadGeneration.png",
-      icon: "/assets/icons/omni_channel_support_icon.svg",
-      title: "Retail Requirements",
-      description:
-        "We can fulfil the never-ending retail requirement to run a contact centre smoothly. Trust us with the need, contact original equipment manufacturers, and make things seamless.",
-      nav: "/retail_requirement",
     },
     {
       image: "/assets/images/recruit_5.png",
@@ -102,6 +102,14 @@ const LatestServices = () => {
       description:
         "Reddington Global has a team of experienced subject matter proficients with years of experience in operational intelligence, performance management, compliance, and quality assurance.",
       nav: "/management_consultancy",
+    },
+    {
+      image: "/assets/images/leadGeneration.png",
+      icon: "/assets/icons/omni_channel_support_icon.svg",
+      title: "Retail Requirements",
+      description:
+        "We can fulfil the never-ending retail requirement to run a contact centre smoothly. Trust us with the need, contact original equipment manufacturers, and make things seamless.",
+      nav: "/retail_requirement",
     },
   ];
   return (
