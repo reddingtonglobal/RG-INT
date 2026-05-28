@@ -254,6 +254,7 @@ const LeadForm = () => {
                       <Form.Item
                         name="pan"
                         label="PAN Number"
+                        normalize={(val) => val?.toUpperCase()}
                         rules={[
                           { pattern: /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/, message: "Enter a valid PAN (e.g. ABCDE1234F)" },
                         ]}
